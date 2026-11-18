@@ -243,8 +243,8 @@ export function createWorld(audio, particles) {
       c.life -= dt;
       if (c.life <= 0) { state.cores.splice(i, 1); continue; }
       if (dist2(c, p) <= (c.r + PLAYER.radius) ** 2) {
-        state.score += 75;
-        if (p.hp < PLAYER.maxHp && Math.random() < 0.25) p.hp += 1;
+        state.score += 90;
+        if (p.hp < PLAYER.maxHp && Math.random() < 0.35) p.hp += 1;
         particles.burst(c.x, c.y, COLORS.core, 10, 90);
         audio.core();
         state.cores.splice(i, 1);
